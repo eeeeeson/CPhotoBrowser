@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "CPhotoBrowserPhotoProtocol.h"
+
 @interface CPhotoBrowserNetPhoto : NSObject
+
+@property (nonatomic, copy)NSURL *photoURL;
+@property (nonatomic, strong)UIImage *image;
+@property (nonatomic, copy)CPhotoLoadImageCompletion loadImageCompletionBlock;
 
 @end

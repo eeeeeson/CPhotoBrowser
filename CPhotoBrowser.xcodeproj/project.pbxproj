@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24955876E2794A9CA2B8399A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7955BAF7D940A4B3BB01A4 /* libPods.a */; };
 		BF4CED761935C5BE000F1D08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4CED751935C5BE000F1D08 /* Foundation.framework */; };
 		BF4CED781935C5BE000F1D08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4CED771935C5BE000F1D08 /* CoreGraphics.framework */; };
 		BF4CED7A1935C5BE000F1D08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4CED791935C5BE000F1D08 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25A35F4C159A40ECA65B11F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8F7955BAF7D940A4B3BB01A4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CED721935C5BE000F1D08 /* CPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CED751935C5BE000F1D08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF4CED771935C5BE000F1D08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,6 +75,8 @@
 		BF4CEDBD1935CFF6000F1D08 /* CPhotoBrowserNetPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhotoBrowserNetPhoto.h; sourceTree = "<group>"; };
 		BF4CEDBE1935CFF6000F1D08 /* CPhotoBrowserNetPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhotoBrowserNetPhoto.m; sourceTree = "<group>"; };
 		BF4CEDC01935D07E000F1D08 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		BFBD14CC1936E21600FE43D4 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SDWebImage.a"; path = "Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
+		BFF3E92A1936E5D400EEA4CF /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SDWebImage.a"; path = "Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 				BF4CED781935C5BE000F1D08 /* CoreGraphics.framework in Frameworks */,
 				BF4CED7A1935C5BE000F1D08 /* UIKit.framework in Frameworks */,
 				BF4CED761935C5BE000F1D08 /* Foundation.framework in Frameworks */,
+				24955876E2794A9CA2B8399A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 				BF4CED941935C5BF000F1D08 /* CPhotoBrowserTests */,
 				BF4CED741935C5BE000F1D08 /* Frameworks */,
 				BF4CED731935C5BE000F1D08 /* Products */,
+				25A35F4C159A40ECA65B11F5 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,11 +128,14 @@
 		BF4CED741935C5BE000F1D08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFF3E92A1936E5D400EEA4CF /* libPods-SDWebImage.a */,
+				BFBD14CC1936E21600FE43D4 /* libPods-SDWebImage.a */,
 				BF4CEDC01935D07E000F1D08 /* AssetsLibrary.framework */,
 				BF4CED751935C5BE000F1D08 /* Foundation.framework */,
 				BF4CED771935C5BE000F1D08 /* CoreGraphics.framework */,
 				BF4CED791935C5BE000F1D08 /* UIKit.framework */,
 				BF4CED8E1935C5BF000F1D08 /* XCTest.framework */,
+				8F7955BAF7D940A4B3BB01A4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF4CED9E1935C5BF000F1D08 /* Build configuration list for PBXNativeTarget "CPhotoBrowser" */;
 			buildPhases = (
+				A0A4DEED1E654CBCAF6C8F2B /* Check Pods Manifest.lock */,
 				BF4CED6E1935C5BE000F1D08 /* Sources */,
 				BF4CED6F1935C5BE000F1D08 /* Frameworks */,
 				BF4CED701935C5BE000F1D08 /* Resources */,
+				B11ED8BCF5BB48EC9B4050D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +296,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0A4DEED1E654CBCAF6C8F2B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B11ED8BCF5BB48EC9B4050D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF4CED6E1935C5BE000F1D08 /* Sources */ = {
@@ -411,12 +456,17 @@
 		};
 		BF4CED9F1935C5BF000F1D08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A35F4C159A40ECA65B11F5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPhotoBrowser/CPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CPhotoBrowser/CPhotoBrowser-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -424,12 +474,17 @@
 		};
 		BF4CEDA01935C5BF000F1D08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A35F4C159A40ECA65B11F5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPhotoBrowser/CPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CPhotoBrowser/CPhotoBrowser-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -494,6 +549,7 @@
 				BF4CEDA01935C5BF000F1D08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF4CEDA11935C5BF000F1D08 /* Build configuration list for PBXNativeTarget "CPhotoBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +558,7 @@
 				BF4CEDA31935C5BF000F1D08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

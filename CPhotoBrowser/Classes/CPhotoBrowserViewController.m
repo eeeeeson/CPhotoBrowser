@@ -68,6 +68,7 @@ static const CGFloat kPageViewHorizontalGap = 20;
     [super viewWillAppear:animated];
 	if (self.currentPageIndex == NSNotFound) {
 		[self showFromIndex:self.initialIndex];
+		beforeRotationPageIndex = self.initialIndex;
 	}
 	[self.navigationController setNavigationBarHidden:YES animated:YES];
 	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:0];

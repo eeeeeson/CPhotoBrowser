@@ -147,18 +147,8 @@ static BOOL isPopAnimating = NO;
     CGFloat xScale = boundsSize.width / imageSize.width;
     CGFloat yScale = boundsSize.height / imageSize.height;
     CGFloat minScale = MIN(xScale, yScale);
-
-    // fit min side to fill the screen
-    if (boundsSize.width > boundsSize.height) {
-        minScale = boundsSize.height / imageSize.height;
-    } else {
-        minScale = boundsSize.width / imageSize.width;
-    }
-
-    minScale = MIN(minScale, MIN(xScale, yScale));
-
     if (isnan(minScale) || isinf(minScale)) {
-        return CGSizeMake(0, 0); // 可能有除以零的操作
+        return CGSizeMake(0, 0);
     }
 
     return CGSizeMake(minScale * imageSize.width, minScale * imageSize.height);
@@ -188,7 +178,8 @@ static BOOL isPopAnimating = NO;
     self.popupImageView = [[UIImageView alloc]initWithFrame:self.originalFrameRelativeToScreen];
     self.popupImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.popupImageView.clipsToBounds = YES;
-    [self.popupImageView setImage:[[self class] imageFromUIView:self.senderView]];
+	UIImage *image = self.senderView.image ? self.senderView.image : [[self class] imageFromUIView:self.senderView];
+    [self.popupImageView setImage:image];
     self.senderView.hidden = YES;
     [self addSubview:self.popupImageView];
     [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
