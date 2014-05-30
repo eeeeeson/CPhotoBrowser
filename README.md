@@ -27,7 +27,7 @@ Setup  browser viewController
 	photoBrowserViewController.datasource = weakSelf;
 	weakSelf.sourceType = CPhotoLoadSourceTypeNetwork;
 	NSInteger index = 0;
-	for (CPhotoBrowserNetPhoto * photo in [self photosArrayForPhotoBrowser:photoBrowserViewController]) {
+	for (CPhotoBrowserNetPhoto * photo in [weakSelf photosArrayForPhotoBrowser:photoBrowserViewController]) {
 		if ([photo.photoURL isEqual:initialUrl]) {
 			photoBrowserViewController.initialIndex = index;
 			break;
