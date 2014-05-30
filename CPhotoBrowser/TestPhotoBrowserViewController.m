@@ -40,11 +40,13 @@ typedef NS_ENUM(NSInteger, CPhotoLoadSourceType) {
     
     __weak typeof(self)weakSelf = self;
     [imageView setupPhotoBrowserWithOpeningBlock:^CPhotoBrowserViewController *{
+		TestPhotoBrowserViewController *strongSelf = weakSelf;
+
         CPhotoBrowserViewController *photoBrowserViewController = [[CPhotoBrowserViewController alloc]init];
-        photoBrowserViewController.datasource = weakSelf;
-		weakSelf.sourceType = CPhotoLoadSourceTypeNetwork;
+        photoBrowserViewController.datasource = strongSelf;
+		strongSelf.sourceType = CPhotoLoadSourceTypeNetwork;
 		NSInteger index = 0;
-		for (CPhotoBrowserNetPhoto * photo in [self photosArrayForPhotoBrowser:photoBrowserViewController]) {
+		for (CPhotoBrowserNetPhoto * photo in [strongSelf photosArrayForPhotoBrowser:photoBrowserViewController]) {
 			if ([photo.photoURL isEqual:initialUrl]) {
 				photoBrowserViewController.initialIndex = index;
 				break;
@@ -161,7 +163,7 @@ typedef NS_ENUM(NSInteger, CPhotoLoadSourceType) {
 
 #pragma mark - CPhotoBrowserDelegate
 
-- (void)photoBrowser:(CPhotoBrowserViewController *)photoBrowser didClickSaveButtonAtPageIndex:(NSUInteger)pageIndex
+- (void)photoBrowser:(CPhotoBrowserViewController *)photoBrowser didDidStartViewingPageAtIndex:(NSUInteger)pageIndex
 {
     
 }
