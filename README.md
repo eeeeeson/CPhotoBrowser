@@ -15,7 +15,7 @@ Xcode5,iOS 5 SDK and Cocoa Pods.
 How To Use
 ---
 
-Setup  browser viewController  
+Setup  browser viewController  associate with UIImageView
 
 ```objc
  UIImageView * imageView = [[UIImageView alloc]init];
@@ -25,7 +25,6 @@ Setup  browser viewController
  [imageView setupPhotoBrowserWithOpeningBlock:^CPhotoBrowserViewController *{
 	CPhotoBrowserViewController *photoBrowserViewController = [[CPhotoBrowserViewController alloc]init];
 	photoBrowserViewController.datasource = weakSelf;
-	weakSelf.sourceType = CPhotoLoadSourceTypeNetwork;
 	NSInteger index = 0;
 	for (CPhotoBrowserNetPhoto * photo in [weakSelf photosArrayForPhotoBrowser:photoBrowserViewController]) {
 		if ([photo.photoURL isEqual:initialUrl]) {
