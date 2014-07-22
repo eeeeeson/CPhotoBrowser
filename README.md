@@ -8,6 +8,8 @@ CPhotoBrowser
 * simply show UIImageView zoom trasition to browser
 * support Interface orientation
 
+![Demo](snapshot.gif)
+
 Requirements
 ---
 Xcode5,iOS 5 SDK and Cocoa Pods.
